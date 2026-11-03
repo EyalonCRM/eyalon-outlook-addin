@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>שיוך למשימה – איילון</title>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<script src="config.js"></script>
+<link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+<header><img src="assets/icon-32.png" alt=""><div><b>שיוך למשימה</b><span>איילון</span></div><button id="btnOut" class="lnk" hidden>יציאה</button></header>
+<main>
+  <section id="mail" class="card"></section>
+  <div id="msg" class="msg" hidden></div>
+
+  <section id="vLogin" hidden>
+    <h3>כניסה לאפליקציית המשימות</h3>
+    <div id="lStep1"><label>מייל<input id="lEmail" type="email" dir="ltr" autocomplete="email"></label><button id="btnCode">שלח קוד</button></div>
+    <div id="lStep2" hidden><p class="m">נשלח קוד בן 6 ספרות למייל</p><label>קוד<input id="lCode" inputmode="numeric" maxlength="6" dir="ltr"></label><button id="btnVerify">כניסה</button> <button id="btnBack" class="lnk">שינוי מייל</button></div>
+  </section>
+
+  <section id="vMain" hidden>
+    <div id="already" hidden></div>
+    <div class="tabs"><button id="tPick" class="on">משימה קיימת</button><button id="tNew">+ משימה חדשה</button></div>
+    <div id="pPick">
+      <select id="fProj"><option value="">כל הפרויקטים</option></select>
+      <input id="fQ" type="search" placeholder="חיפוש משימה (שם, מזהה, אחראי)…">
+      <div id="list" class="list"></div>
+    </div>
+    <div id="pNew" hidden>
+      <label>כותרת<input id="nTitle"></label>
+      <label>פרויקט<select id="nProj"><option value="">ללא פרויקט</option></select></label>
+      <label>תאריך יעד<input id="nDl" type="date"></label>
+      <label>עדיפות<select id="nPr"><option value="">—</option><option>גבוהה</option><option>בינונית</option><option>נמוכה</option></select></label>
+    </div>
+    <div class="opts">
+      <label class="ck"><input type="checkbox" id="oSnip"> לצרף קטע מגוף המייל</label>
+      <div id="atts"></div>
+    </div>
+    <div id="sel" class="sel" hidden></div>
+    <button id="btnGo" class="go" disabled>שייך למשימה</button>
+    <div id="prog" class="m"></div>
+  </section>
+</main>
+<script src="taskpane.js"></script>
+</body>
+</html>
