@@ -2,13 +2,13 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>שיוך למשימה – איילון</title>
+<title>תיוק מייל – איילון</title>
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 <script src="config.js"></script>
 <link rel="stylesheet" href="taskpane.css">
 </head>
 <body>
-<header><img src="assets/icon-32.png" alt=""><div><b>שיוך למשימה</b><span>איילון</span></div><button id="btnOut" class="lnk" hidden>יציאה</button></header>
+<header><img src="assets/icon-32.png" alt=""><div><b>תיוק מייל</b><span>איילון</span></div><a id="btnFb" class="lnk" target="_blank" rel="noopener" hidden title="בקשה לשיפור המערכת">💡</a><button id="btnOut" class="lnk" hidden>יציאה</button></header>
 <main>
   <section id="mail" class="card"></section>
   <div id="msg" class="msg" hidden></div>
@@ -21,15 +21,23 @@
 
   <section id="vMain" hidden>
     <div id="already" hidden></div>
-    <div class="tabs"><button id="tPick" class="on">משימה קיימת</button><button id="tNew">+ משימה חדשה</button></div>
-    <div id="pPick">
+    <div id="idWarn" class="msg err" hidden></div>
+    <label>פרויקט<select id="aProj"><option value="">— בחר פרויקט —</option></select></label>
+    <div id="sugP" class="chips"></div>
+    <div class="tabs"><button id="tFile" class="on">📁 תיוק לפרויקט</button><button id="tPick">משימה קיימת</button><button id="tNew">+ משימה חדשה</button></div>
+    <div id="pFile"><label>הערה (אופציונלי)<input id="fNote" maxlength="500"></label></div>
+    <div id="pPick" hidden>
       <select id="fProj"><option value="">כל הפרויקטים</option></select>
       <input id="fQ" type="search" placeholder="חיפוש משימה (שם, מזהה, אחראי)…">
+      <div id="sugT"></div>
       <div id="list" class="list"></div>
+      <label id="subW" hidden>תת-משימה (אופציונלי)<select id="fSub"><option value="">— המשימה עצמה —</option></select></label>
     </div>
     <div id="pNew" hidden>
       <label>כותרת<input id="nTitle"></label>
-      <label>פרויקט<select id="nProj"><option value="">ללא פרויקט</option></select></label>
+      <div class="m" id="nProjL"></div>
+      <label id="nOwnW" hidden>אחראי<select id="nOwn"></select></label>
+      <label>תחת משימה (אופציונלי)<select id="nPar"><option value="">— משימה עצמאית —</option></select></label>
       <label>תאריך יעד<input id="nDl" type="date"></label>
       <label>עדיפות<select id="nPr"><option value="">—</option><option>גבוהה</option><option>בינונית</option><option>נמוכה</option></select></label>
     </div>
@@ -38,7 +46,7 @@
       <div id="atts"></div>
     </div>
     <div id="sel" class="sel" hidden></div>
-    <button id="btnGo" class="go" disabled>שייך למשימה</button>
+    <button id="btnGo" class="go" disabled>תייק</button>
     <div id="prog" class="m"></div>
   </section>
 </main>

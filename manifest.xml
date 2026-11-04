@@ -2,11 +2,11 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>6f1c2a7e-3b9d-4e57-9a61-e1a0e57a5b37</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>Eyalon Group</ProviderName>
   <DefaultLocale>he-IL</DefaultLocale>
-  <DisplayName DefaultValue="שיוך למשימה – איילון"/>
-  <Description DefaultValue="שיוך המייל הנוכחי וקבציו המצורפים למשימה באפליקציית המשימות של איילון"/>
+  <DisplayName DefaultValue="תיוק מייל – איילון"/>
+  <Description DefaultValue="תיוק המייל הנוכחי לפרויקט או למשימה באפליקציית המשימות של איילון"/>
   <IconUrl DefaultValue="https://eyaloncrm.github.io/eyalon-outlook-addin/assets/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://eyaloncrm.github.io/eyalon-outlook-addin/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://eyaloncrm.github.io/eyalon-outlook-addin/support.html"/>
@@ -55,9 +55,9 @@
         <bt:Urls><bt:Url id="paneUrl" DefaultValue="https://eyaloncrm.github.io/eyalon-outlook-addin/taskpane.html"/></bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="איילון"/>
-          <bt:String id="btnLabel" DefaultValue="שיוך למשימה"/>
+          <bt:String id="btnLabel" DefaultValue="תיוק לאיילון"/>
         </bt:ShortStrings>
-        <bt:LongStrings><bt:String id="btnDesc" DefaultValue="שיוך המייל וקבציו המצורפים למשימה באפליקציית המשימות של איילון"/></bt:LongStrings>
+        <bt:LongStrings><bt:String id="btnDesc" DefaultValue="תיוק המייל לפרויקט, למשימה או לתת-משימה באפליקציית המשימות של איילון"/></bt:LongStrings>
       </Resources>
     </VersionOverrides>
   </VersionOverrides>
